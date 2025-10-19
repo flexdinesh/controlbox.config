@@ -1,0 +1,13 @@
+# ignore all directories by default
+/*
+!.gitignore
+
+# selectively include the directories that need to be on git
+!kitty
+!ghostty
+!fish
+!nvim
+!fastfetch
+!swaync
+!electron-flags.conf
+!.zshrc
