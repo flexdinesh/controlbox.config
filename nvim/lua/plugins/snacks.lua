@@ -22,9 +22,13 @@ return {
             hidden = true,
             ignored = true,
             exclude = {
+              -- global
               "**/.git/*",
+              -- js projects
               "**/node_modules/*",
               "**/.turbo/*",
+              -- personal perferences
+              "_archive/**/*",
             },
           },
         },

@@ -3,7 +3,6 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-
       default_format_opts = {
         timeout_ms = 3000,
         async = false, -- not recommended to change
@@ -11,19 +10,10 @@ return {
         lsp_format = "fallback", -- not recommended to change
       },
       formatters_by_ft = {
-        lua = { "stylua" },
-        javascript = { "prettierd", "prettier", stop_after_first = true },
-        typescript = { "prettierd", "prettier", stop_after_first = true },
-        json = { "prettierd", "prettier", stop_after_first = true },
-        css = { "prettierd", "prettier", stop_after_first = true },
-        typescriptreact = { "prettierd", "prettier", stop_after_first = true },
         graphql = { "prettierd", "prettier", stop_after_first = true },
-        md = { "prettierd", "prettier", stop_after_first = true },
-        mdx = { "prettierd", "prettier", stop_after_first = true },
+        -- md = { "prettierd", "prettier", stop_after_first = true },
+        -- mdx = { "prettierd", "prettier", stop_after_first = true },
         astro = { "prettierd", "prettier", stop_after_first = true },
-        go = { "goimports", "gofumpt" },
-        gofumpt = { "gofumpt" },
-        glsl = { "glslangValidator" },
         fish = { "fish_indent" },
         sh = { "shfmt" },
       },
