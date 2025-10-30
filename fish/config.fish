@@ -1,6 +1,11 @@
 # Set up fzf key bindings
 fzf --fish | source
 
+# Source secrets file if it exists
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
+end
+
 ## ALIASES ##
 alias gst="git status"
 alias gba="git branch --all"
