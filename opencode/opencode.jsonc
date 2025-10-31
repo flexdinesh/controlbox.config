@@ -1,0 +1,47 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "tools": {
+    "bash": true,
+    "edit": true,
+    "write": true,
+    "read": true,
+    "grep": true,
+    "glob": true,
+    "list": true,
+    "patch": true,
+    "todowrite": true,
+    "todoread": true,
+    "webfetch": true
+  },
+  "permission": {
+    "bash": "ask",
+    "edit": "ask",
+    "webfetch": "allow"
+  },
+  "agent": {
+    "plan": {
+      "tools": {
+        "edit": false,
+        "write": false,
+        "patch": false
+      },
+      "permission": {
+        "bash": "ask",
+        "edit": "ask",
+        "webfetch": "allow"
+      },
+    },
+    "build": {
+      "permission": {
+        "bash": {
+          "find *": "allow",
+          "git status": "allow",
+          "git log": "allow"
+        },
+        "edit": "ask",
+        "webfetch": "allow"
+      },
+    }
+  }
+}
