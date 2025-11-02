@@ -17,10 +17,11 @@
   "permission": {
     "bash": "ask",
     "edit": "ask",
-    "webfetch": "allow"
+    "webfetch": "allow",
   },
   "agent": {
     "plan": {
+      "model": "anthropic/claude-sonnet-4-5",
       "tools": {
         "edit": false,
         "write": false,
@@ -33,15 +34,42 @@
       },
     },
     "build": {
+      "model": "anthropic/claude-sonnet-4-5",
       "permission": {
         "bash": {
           "find *": "allow",
-          "git status": "allow",
-          "git log": "allow"
+          "git status *": "allow",
+          "git log *": "allow"
         },
         "edit": "ask",
         "webfetch": "allow"
       },
+    },
+    "explore": {
+      "description": "Fast agent specialized for exploring codebases. Use for finding files by patterns, searching code for keywords, or answering questions about the codebase.",
+      "mode": "subagent",
+      "model": "anthropic/claude-haiku-4-5",
+      "temperature": 0.1,
+      "tools": {
+        "edit": false,
+        "write": false,
+        "patch": false
+      },
+      "permission": {
+        "bash": {
+          "find *": "allow",
+          "grep *": "allow",
+          "sort *": "allow",
+          "ls *": "allow",
+          "tree *": "allow",
+          "head *": "allow",
+          "git status *": "allow",
+          "git log *": "allow",
+          "git diff *": "allow",
+          "git show *": "allow"
+        },
+        "webfetch": "allow"
+      }
     }
   }
 }
