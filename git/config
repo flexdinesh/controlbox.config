@@ -97,8 +97,11 @@
   gpgSign = true
 
 [user]
-	email = flexdinesh@gmail.com
-	name = Dinesh Pandiyan
+  email = flexdinesh@gmail.com
+  name = Dinesh Pandiyan
   username = flexdinesh
-	signingkey = /home/dee/.ssh/id_ed25519_github.pub
+  signingkey = /home/dee/.ssh/id_ed25519_github.pub
+
+[includeIf "gitdir:~/workspace-lab/"]
+  path = config.lab
 
