@@ -4,10 +4,5 @@
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
     "OTEL_METRICS_EXPORTER": "otlp"
   },
-  "permissions": {
-    "allow": ["WebFetch", "WebSearch", "Glob", "Grep"],
-    "deny": [],
-    "ask": ["Write", "Edit"]
-  },
   "alwaysThinkingEnabled": true
 }
